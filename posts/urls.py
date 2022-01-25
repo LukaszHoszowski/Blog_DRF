@@ -1,8 +1,9 @@
 from django.urls import path
 from . import views
 
-app_name = 'Posts'
+app_name = 'posts'
 
 urlpatterns = [
-    path('/', views.PostView.as_view(), name="posts"),
+    path('', views.PostAPIList.as_view(), name="list"),
+    path('<int:pk>/', views.PostAPIDetail.as_view(), name="detail"),
 ]
