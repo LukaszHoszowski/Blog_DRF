@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b2cda3565f49ff47a6b583efe7079d0a3c443ddf04155a0c9022b1bdaf2bb0a4"
+            "sha256": "47a08b324f3b886f28601e772a8be5699cc02c6883e8db6f50914f3f0642a2fe"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -45,6 +45,13 @@
             ],
             "markers": "python_version < '3.9'",
             "version": "==0.2.1"
+        },
+        "dj-rest-auth": {
+            "hashes": [
+                "sha256:fda25a777ac23bc2561f2579de5c45f058d0f1d27410469d5b321c353c4822ad"
+            ],
+            "index": "pypi",
+            "version": "==2.2.2"
         },
         "django": {
             "hashes": [

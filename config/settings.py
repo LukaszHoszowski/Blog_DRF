@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "rest_framework",
     "rest_framework.authtoken",
+    "dj_rest_auth",
 
     'posts.apps.PostsConfig',
     'user.apps.UserConfig',

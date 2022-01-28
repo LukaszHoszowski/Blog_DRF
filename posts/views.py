@@ -3,7 +3,7 @@ from rest_framework import generics, permissions
 
 from .models import Post
 from .permissions import IsAuthorOrReadOnly, IsAuthorOrReadOnlyAdminDelete, IsAuthorOrReadOnlyAuthorCanEdit, \
-    IsAuthorOrReadOnlyTime
+    IsAuthorOrReadOnlyTime, NotPostman
 from .serializers import PostSerializer
 
 
@@ -16,4 +16,4 @@ class PostAPIList(generics.ListCreateAPIView):
 class PostAPIDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    permission_classes = (IsAuthorOrReadOnlyTime,)
+    permission_classes = (NotPostman,)
