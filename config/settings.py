@@ -44,11 +44,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
     "debug_toolbar",
     "rest_framework",
     "rest_framework.authtoken",
     "dj_rest_auth",
+    "dj_rest_auth.registration",
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 
     'posts.apps.PostsConfig',
     'user.apps.UserConfig',
@@ -81,6 +86,11 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
@@ -147,4 +157,7 @@ REST_FRAMEWORK = {
         ],
 }
 
+SITE_ID = 1
+
 AUTH_USER_MODEL = 'user.CustomUser'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
