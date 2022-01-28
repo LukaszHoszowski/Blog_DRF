@@ -1,0 +1,1 @@
+# TODO - tylko rok, paginacja, docker compose Postgres
